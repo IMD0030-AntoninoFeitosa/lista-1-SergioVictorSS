@@ -8,5 +8,10 @@
 template <std::size_t SIZE>
 void reverse( std::array< std::string, SIZE > & arr )
 {
-    /*codigo*/
+    std::array<std::string,SIZE> invertido;
+  for(int i = SIZE; i>0;i--)
+  {
+    invertido[SIZE-i] = arr[i-1];
+  }
+  arr  = invertido;
 }
