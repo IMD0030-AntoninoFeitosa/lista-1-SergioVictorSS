@@ -20,11 +20,11 @@ int main(int argc, char * argv[])
     int qtdIntervalos [] = {0,0,0,0};
     int out = 0;
     while( cin >> std::ws >> x) {
-        if(x >= 0 && x <= 25 ){
+        if(x >= 0 && x < 25 ){
           qtdIntervalos[0]++;
-        } else if (x >= 0 && x < 25 ) {
+        } else if (x >= 25 && x < 50 ) {
           qtdIntervalos[1]++;
-        }else if (x >= 25 && x < 75 ) {
+        }else if (x >= 50 && x < 75 ) {
           qtdIntervalos[2]++;
         }else if (x >= 75 && x < 100 ) {
           qtdIntervalos[3]++;
@@ -34,8 +34,8 @@ int main(int argc, char * argv[])
         qtd++;
     }
     for(int qtds : qtdIntervalos){
-      std::cout << std::setprecision(4) << qtds/qtd*100 << "\n";
+      std::cout << std::setprecision(4) << static_cast<double>(qtds)/qtd*100.0 << "\n";
     }
-        std::cout << std::setprecision(4) << out/qtd*100 << "\n";
+        std::cout << std::setprecision(4) << static_cast<double>(out)/qtd*100.0 << "\n";
     return 0;
 }
