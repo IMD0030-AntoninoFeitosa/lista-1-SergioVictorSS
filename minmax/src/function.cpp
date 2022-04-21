@@ -12,18 +12,23 @@
 
 std::pair<int,int> min_max( int V[], std::size_t n )
 {
+    
   if(n > 0)
   {
-  int max = V[0];
-  int min = V[0];
+  int max,min = V[0],V[0];
+  int iMax = 0;
+  int iMin = 0;
    for(int i = 0;i<n;i++)
    {
-     if(V[i] > max)
+     if(V[i] >= max)
      {
        max = V[i];
-     }else if (V[i] < min)
+       iMax = i;
+     }
+     if (V[i] < min)
      {
        min = V[i];
+       iMin = i;
      }
    }
   return {min,max};
