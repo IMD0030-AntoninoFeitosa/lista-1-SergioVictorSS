@@ -15,7 +15,8 @@ std::pair<int,int> min_max( int V[], std::size_t n )
     
   if(n > 0)
   {
-  int max,min = V[0],V[0];
+  int max = V[0];
+  int min = V[0];
   int iMax = 0;
   int iMin = 0;
    for(int i = 0;i<n;i++)
@@ -31,7 +32,7 @@ std::pair<int,int> min_max( int V[], std::size_t n )
        iMin = i;
      }
    }
-  return {min,max};
+  return {iMin,iMax};
   }
   return {-1,-1};
 }

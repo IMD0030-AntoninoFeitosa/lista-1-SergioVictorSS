@@ -48,6 +48,7 @@ TEST_CASE("Two elements, (a,b), so that a = b", "[min_max]")
     size_t n{2};
 
     auto [ mi, ma ] = min_max( A, n );
+
     REQUIRE( mi == 0 );
     REQUIRE( ma == 1 );
 }
